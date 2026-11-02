@@ -1,0 +1,219 @@
+html{
+    font-family: "Quicksand", sans-serif;
+    color: rgb(74, 72, 70);
+    margin: 0;
+    background-color: rgb(234, 233, 225);
+    font-weight: 500;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+}
+
+
+
+h3{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    margin-left: 0.5em;
+}
+
+
+
+
+
+header{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    
+    padding: 0.5em 1em;
+
+    z-index: 5;
+
+    color: rgb(234, 233, 225);
+}
+
+nav{
+    margin: 0.5em;
+    padding: 0.5em;
+
+    display: flex;
+    gap: 2em;
+    font-weight: 700;
+
+    color: rgb(234, 233, 225);
+}
+
+nav a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(234, 233, 225);
+}
+
+a:hover{
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+
+
+
+#hero{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    margin-bottom: 4em;
+    border-radius: 0 0 50px 50px;
+}
+
+#hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.9)
+    );
+}
+
+.title{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    right: 5%;
+    transform: translateY(-50%);
+
+    color: #F9FAFA;
+}
+
+.title h1{
+    font-size: 40px;
+}
+
+.title h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#tags{
+    display: flex;
+    gap: 2.5em;
+    
+}
+
+#tags h3{
+    padding: 0.5em 2em;
+    color: rgb(238, 236, 231);
+    border: 3px dotted rgb(224, 200, 115);
+    border-radius: 20px;
+
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+.food{
+    margin-bottom: 3em;
+    background-color: rgb(244, 228, 183);
+
+    padding: 2em;
+    border-radius: 30px;
+    border: 3px dotted rgb(68, 66, 65);
+}
+
+.steps{
+    gap: 2em;
+}
+
+.steps li{
+    margin-bottom: 2em;
+}
+
+.steps sup{
+    display: block;
+    margin-bottom: 2em;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin: 4em;
+}
+
+#ingredients{
+    flex: 1;
+}
+
+#tips{
+    background-color: #dbdbd1;
+    padding: 2em;
+    color: rgb(68, 66, 65);
+    border-radius: 30px;
+}
+
+#prep{
+    flex: 1.5;
+}
+
+.item{
+    margin-bottom: 2em;
+}
+
+
+
+.photogrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+}
+
+.photogrid img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (min-width: 850px){
+    .content{
+        flex-direction: row;
+        margin: 2em;
+    }
+
+    #ingredients{
+        flex: 1;
+    }
+
+    #prep{
+        flex: 1.5;
+    }
+}
