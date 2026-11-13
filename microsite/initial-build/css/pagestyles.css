@@ -1,0 +1,218 @@
+html{
+    background-color: #343A24;
+    color: #BE9A52;
+
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+}
+
+main{
+    position: relative;
+    z-index: 4;
+    padding-bottom: 12em;
+    background-color: #343A24;
+
+    margin: 10em 10em;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 48px;
+}
+
+#bio, #disco{
+    padding: 5em;
+}
+
+a{
+    color: #BE9A52;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+a:hover{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+a:active{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+
+
+/* nav*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width: 100px;
+    height: auto;
+
+    margin: 1em;
+    margin-left: 8vw;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.4em;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #BE9A52;
+    border-radius: 7px;
+    padding: 0.5em 0.8em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #BE9A52;
+    color: #343A24;
+}
+
+
+/* album list styling */
+
+h1{
+    font-size: 64px;
+}
+
+#albumtrack {
+    display: flex;
+    flex-direction: column;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3em;
+
+    padding: 5em 0;
+    border-bottom: 1px solid #BE9A52;
+}
+
+.albuminfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.albuminfo img {
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.albuminfo h4 {
+    font-size: 26px;
+    margin: 0 0 0.3em;
+}
+
+.albuminfo span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.tracklist ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tracklist li {
+    font-size: 15px;
+    padding: 1.5em 0;
+    border-bottom: 1px solid #BE9A52;
+}
+
+
+/*footer*/
+
+
+#forest{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+
+    background-image: url("../forest.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-size: auto 120%;
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+/* individual page styling */
+
+html:has(body.busyhead) {
+    background-color: #968261;
+    color: #FFFEF2;
+}
+
+body.busyhead{
+    background-color: #968261;
+    color: #FFFEF2;
+}
+
+body.busyhead main {
+    background-color: #968261;
+}
+
+body.busyhead a {
+    color: #FFFEF2;
+}
+
+body.busyhead a:hover {
+    background-color: #FFFEF2;
+    color: #968261;
+}

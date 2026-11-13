@@ -1,0 +1,306 @@
+html{
+    background-color: #343A24;
+    color: #BE9A52;
+
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+}
+
+main{
+    position: relative;
+    z-index: 4;
+    padding-bottom: 12em;
+    background-color: #343A24;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 48px;
+}
+
+#bio, #disco{
+    padding: 5em;
+}
+
+a{
+    color: #BE9A52;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+a:active{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+
+/*hero / header */
+
+
+
+#hero {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+#hero img {
+    position: absolute;
+    inset: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: translateY(0);
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.95)
+    );
+}
+
+.herotitle {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    z-index: 2;
+}
+
+.herotitle h1 {
+    font-size: clamp(100px, 15vw, 130px);
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+    font-weight: 700;
+}
+
+.herotitle #discover{
+    font-size: 50px;
+    padding: 0.2em;
+}
+
+#hero::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #343A24
+    );
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 3;
+}
+
+header img{
+    width: 100px;
+    height: auto;
+
+    margin: 1em;
+    margin-left: 8vw;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.4em;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #BE9A52;
+    border-radius: 7px;
+    padding: 0.5em 0.8em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #BE9A52;
+    color: #343A24;
+}
+
+
+/*bio*/
+
+
+#biowrapper{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    background-color: #343A24;
+    margin-top: -1px;
+    margin-bottom: 3em;
+}
+
+#bio {
+    width: 78%;
+    margin: auto;
+    padding: 4.5em 0.25em;
+
+    display: flex;
+    align-items: center;
+    gap: 3em;
+
+    color: #BE9A52;
+}
+
+#bio img {
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+}
+
+#biotext {
+    flex: 1;
+}
+
+#biotext h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 0.3em;
+}
+
+#biotext p {
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+/*album*/
+
+#disco {
+    width: 78%;
+    margin: auto;
+    padding: 4em 0;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5em;
+
+    align-items: start;
+}
+
+#discointro{
+    position: sticky;
+    top: 5em;
+}
+
+#discointro h3 {
+    font-size: 42px;
+    font-weight: 500;
+    border-bottom: 1px solid #BE9A52;
+    padding-bottom: 0.7em;
+    margin: 0 0 1em;
+}
+
+#albumlist {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.album{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    padding-bottom: 2em;
+    border-bottom: 1px solid #BE9A52;
+}
+
+.album img{
+    width: 160px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+.albuminfo{
+    flex: 1;
+}
+
+.albuminfo h4{
+    font-size: 30px;
+    margin: 0 0 0.2em;
+}
+
+/*footer*/
+
+
+#forest{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+
+    background-image: url("../forest.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-size: auto 120%;
+    z-index: 5;
+
+    pointer-events: none;
+}
