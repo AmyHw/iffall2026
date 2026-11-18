@@ -1,0 +1,589 @@
+html{
+    background-color: #343A24;
+    color: #BE9A52;
+
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+}
+
+main{
+    position: relative;
+    z-index: 4;
+    padding-bottom: 12em;
+    background-color: #343A24;
+}
+
+body{
+    margin: 0;
+    position: relative;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 48px;
+}
+
+#bio, #disco{
+    padding: 5em;
+}
+
+p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+a{
+    color: #BE9A52;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+a:active{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+
+/*hero / header */
+
+
+
+#hero {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+#hero img {
+    position: absolute;
+    inset: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: translateY(0);
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.95)
+    );
+}
+
+.herotitle {
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    z-index: 2;
+}
+
+.herotitle h1 {
+    font-size: clamp(100px, 15vw, 130px);
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+    font-weight: 700;
+}
+
+.herotitle #discover{
+    font-size: 50px;
+    padding: 0.2em;
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 30px;
+}
+
+.herotitle #discover:hover{
+    background-color: #e9c171;
+    color: #343A24;
+    border-radius: 30px;
+}
+
+#hero::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #343A24
+    );
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    .herotitle {
+        top: 15%;
+        left: 6%;
+    }
+
+    .herotitle h1 {
+        font-size: clamp(75px, 14vw, 110px);
+    }
+
+    .herotitle #discover {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #hero {
+        min-height: 500px;
+    }
+
+    .herotitle {
+        top: 22%;
+        left: 6%;
+    }
+
+    .herotitle h1 {
+        font-size: clamp(65px, 17vw, 95px);
+    }
+
+    .herotitle #discover {
+        font-size: 28px;
+    }
+}
+
+/*header*/
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 3;
+}
+
+header img{
+    width: 100px;
+    height: auto;
+
+    margin: 1em;
+    margin-left: 8vw;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.4em;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #BE9A52;
+    border-radius: 7px;
+    padding: 0.5em 0.8em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #BE9A52;
+    color: #343A24;
+}
+
+@media screen and (max-width: 1000px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8em 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 1em 3vw;
+    }
+
+    nav {
+        gap: 0.5em 0.8em;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+
+/*bio*/
+
+
+#biowrapper{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    background-color: #343A24;
+    margin-top: -1px;
+    margin-bottom: 3em;
+}
+
+#bio {
+    width: 78%;
+    margin: auto;
+    padding: 4.5em 0.25em;
+
+    display: flex;
+    align-items: center;
+    gap: 3em;
+
+    color: #BE9A52;
+}
+
+#bio img {
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+}
+
+#biotext {
+    flex: 1;
+}
+
+#biotext h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0.2em 0;
+    display: inline;
+}
+
+#biotext p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    display: inline;
+}
+
+/*small*/
+
+@media screen and (max-width: 850px) {
+
+    #bio {
+        width: 90%;
+        gap: 2em;
+    }
+
+    #bio img {
+        width: 130px;
+        height: 150px;
+    }
+
+    #biotext h2 {
+        font-size: 30px;
+    }
+
+    #biotext p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #bio {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 3em 1.5em;
+        gap: 1.5em;
+    }
+
+    #bio img {
+        width: 150px;
+        height: 170px;
+    }
+
+    #biotext h2 {
+        font-size: 32px;
+    }
+}
+
+/*album*/
+
+#disco {
+    width: 78%;
+    margin: auto;
+    padding: 4em 0;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5em;
+
+    align-items: start;
+}
+
+#discointro{
+    position: sticky;
+    top: 5em;
+}
+
+#discointro h3 {
+    font-size: 42px;
+    font-weight: 500;
+    border-bottom: 1px solid #BE9A52;
+    padding-bottom: 0.7em;
+    margin: 0 0 1em;
+}
+
+/*disco small*/
+
+@media screen and (max-width: 850px) {
+
+    #disco {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    #discointro {
+        position: relative;
+        top: auto;
+    }
+
+    #discointro h3 {
+        font-size: 36px;
+    }
+}
+
+/*songs*/
+
+#albumlist {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.album{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    padding-bottom: 2em;
+    border-bottom: 1px solid #BE9A52;
+}
+
+.album img{
+    width: 160px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+.albuminfo{
+    flex: 1;
+}
+
+.albuminfo h4{
+    font-size: 30px;
+    margin: 0 0 0.2em;
+}
+
+@media screen and (max-width: 600px) {
+
+    #disco {
+        width: 90%;
+        padding: 2em 0;
+    }
+
+    .album {
+        gap: 1em;
+    }
+
+    .album img {
+        width: 110px;
+        border-radius: 15px;
+    }
+
+    .albuminfo h4 {
+        font-size: 23px;
+    }
+}
+
+/*footer*/
+
+
+/*#forest{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 200px;
+
+    background-image: url("../forest.png");
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    background-size: auto 100%;
+    z-index: 5;
+
+    pointer-events: none;
+}*/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 350px;
+
+    z-index: 5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.forest{
+    position: absolute;
+    bottom: 0;
+
+    height: 70%;
+    width: auto;
+    max-width: none;
+}
+
+.forest1{
+    left: -5%;
+}
+
+.forest2{
+    left: 10%;
+    transform: scaleX(-1);
+}
+
+.forest3{
+    left: 25%;
+}
+
+.forest4{
+    left: 40%;
+    transform: scaleX(-1);
+}
+
+.forest5{
+    left: 55%;
+    transform: scaleX(-1);
+}
+
+.forest6{
+    left: 70%;
+    transform: scaleX(-1);
+}
+
+.forest7{
+    left: 85%;
+    transform: scaleX(-1);
+}
+
+.forest8{
+    left: 100%;
+    transform: scaleX(-1);
+}
+
+.forest9{
+    left: 70%;
+    transform: scaleX(-1);
+}
+
+/*test*/
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    animation: floatIn 0.5s ease-out both;
+}
+
+p{
+    animation: floatIn 1s ease-out both;
+}
+
+div{
+    animation: floatIn 1.5s ease-out both;
+}
+
+#sources a{
+    animation: floatIn 1s ease-out both;
+}
+
+@media screen and (max-width: 850px) {
+    #bio, #disco {
+        padding: 3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #bio, #disco {
+        padding: 2em 1.5em;
+    }
+}

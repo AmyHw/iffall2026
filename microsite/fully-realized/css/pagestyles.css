@@ -1,0 +1,533 @@
+html{
+    background-color: #343A24;
+    color: #BE9A52;
+
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+}
+
+main{
+    position: relative;
+    z-index: 4;
+    padding-bottom: 2em;
+    background-color: #343A24;
+
+    margin: 10em 10em 0;
+
+    flex: 1;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 48px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#bio, #disco{
+    padding: 5em;
+}
+
+a{
+    color: #BE9A52;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+a:hover{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+a:active{
+    background-color: #BE9A52;
+    color: #343A24;
+    border-radius: 50px;
+}
+
+iframe{
+    margin-top: 2em;
+}
+
+
+
+/* nav*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width: 100px;
+    height: auto;
+
+    margin: 1em;
+    margin-left: 8vw;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.4em;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid #BE9A52;
+    border-radius: 7px;
+    padding: 0.5em 0.8em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #BE9A52;
+    color: #343A24;
+}
+
+#blogo{
+    width: 250px;
+    height: auto;
+}
+
+/*small*/
+
+@media screen and (max-width: 1000px){
+    header{
+        flex-direction: column;
+        align-tracks: center;
+        gap: 1em;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8em 1.5em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 1em 3vw;
+    }
+
+    nav {
+        gap: 0.5em 1em;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* album list styling */
+
+h1{
+    font-size: 64px;
+}
+
+/* album list styling */
+
+#albumtracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3em;
+
+    padding: 5em 0;
+    border-bottom: 1px solid #BE9A52;
+}
+
+.albuminfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.albuminfo img {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.albuminfo h4 {
+    font-size: 50px;
+    margin: 0 0 0.3em;
+}
+
+.albuminfo span {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.tracklist ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tracklist li {
+    font-size: 15px;
+    padding: 1.5em 0;
+    border-bottom: 1px solid #BE9A52;
+}
+
+/*small*/
+
+@media screen and (max-width: 850px) {
+
+    .album {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        padding: 3em 0;
+    }
+
+    .albuminfo {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .albuminfo img {
+        width: 100%;
+    }
+
+    .albuminfo h4 {
+        font-size: 36px;
+    }
+
+    .albuminfo span {
+        font-size: 17px;
+    }
+
+    .albuminfo iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .albuminfo {
+        grid-template-columns: 1fr;
+    }
+
+    .albuminfo img {
+        width: 250px;
+    }
+
+    .albuminfo h4 {
+        font-size: 36px;
+    }
+
+    .album {
+        padding: 2em 0;
+    }
+
+    .tracklist li {
+        padding: 1em 0;
+    }
+}
+
+/*footer*/
+
+
+#forest{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+
+    background-image: url("../forest.png");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-size: auto 120%;
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+/* busyhead  page styling */
+
+html:has(body.busyhead) {
+    background-color: #968261;
+    color: #FFFEF2;
+}
+
+body.busyhead{
+    background-color: #968261;
+    color: #FFFEF2;
+}
+
+body.busyhead main {
+    background-color: #968261;
+}
+
+body.busyhead a{
+    color: #FFFEF2;
+}
+
+body.busyhead #web {
+    background-color: #FFFEF2;
+    color: #968261;
+
+    border-radius: 30px;
+}
+
+body.busyhead #web:hover {
+    background-color: #e7e7e7;
+    color: #968261;
+}
+
+/*stick season*/
+
+html:has(body.stickseason) {
+    background-color: #8d9870;
+    color: rgb(33, 28, 24);
+}
+
+body.stickseason{
+    background-color: #8d9870;
+    color: rgb(33, 28, 24);
+}
+
+body.stickseason main {
+    background-color: #8d9870;
+    color: rgb(33, 28, 24);
+}
+
+body.stickseason a {
+    color: rgb(33, 28, 24);
+}
+
+body.stickseason .tracklist li {
+    font-size: 15px;
+    padding: 1.5em 0;
+    border-bottom: 1px solid rgb(33, 28, 24);
+}
+
+/*greatdivide*/
+
+html:has(body.greatdivide) {
+    background-color: #5d5138;
+    color: #FFFEF2;
+}
+
+body.greatdivide{
+    background-color: #5d5138;
+    color: #FFFEF2;
+}
+
+body.greatdivide main {
+    background-color: #5d5138;
+    color: #FFFEF2;
+}
+
+body.greatdivide a {
+    color: #FFFEF2;
+}
+
+body.greatdivide .tracklist li {
+    font-size: 15px;
+    padding: 1.5em 0;
+    border-bottom: 1px solid #FFFEF2;
+}
+
+
+/*img grid*/
+
+.imggrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+
+    width: 100%;
+    margin: 7em 0 0 0;
+}
+
+.imggrid img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+    .imggrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .imggrid {
+        grid-template-columns: 1fr;
+    }
+
+    .imggrid img {
+        height: 250px;
+    }
+}
+
+
+/*tree*/
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 350px;
+
+    z-index: 5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.forest{
+    position: absolute;
+    bottom: 0;
+
+    height: 70%;
+    width: auto;
+    max-width: none;
+}
+
+.forest1{
+    left: -5%;
+}
+
+.forest2{
+    left: 10%;
+    transform: scaleX(-1);
+}
+
+.forest3{
+    left: 25%;
+}
+
+.forest4{
+    left: 40%;
+    transform: scaleX(-1);
+}
+
+.forest5{
+    left: 55%;
+    transform: scaleX(-1);
+}
+
+.forest6{
+    left: 70%;
+    transform: scaleX(-1);
+}
+
+.forest7{
+    left: 85%;
+    transform: scaleX(-1);
+}
+
+.forest8{
+    left: 100%;
+    transform: scaleX(-1);
+}
+
+.forest9{
+    left: 70%;
+    transform: scaleX(-1);
+}
+
+/*test*/
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    animation: floatIn 0.5s ease-out both;
+}
+
+p{
+    animation: floatIn 0.5s ease-out both;
+}
+
+div{
+    animation: floatIn 1s ease-out both;
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        margin: 10em 4em 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        margin: 8em 1.5em 0;
+    }
+}
